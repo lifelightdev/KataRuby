@@ -22,7 +22,16 @@ class Les_boucles
   def deuxieme_exercice
     items = [6, 9, 2, 1, 4, 0, 18, 3]
     # Ecrire ici le code qui permet de retourner un tableau contenant seulement les éléments pairs d'items
-    []
+    # Première solution
+    items.map { |element| element if (element % 2) == 0 }.compact
+    # Deuxième solution
+    items.filter_map { |element| element if (element % 2) == 0 }
+    # Troisième solution
+    items.filter { |element| (element % 2) == 0 }
+    # Quatrième solution
+    items.filter { |element| element.even? }
+    # Cinquième solution
+    items.filter(&:even?)
   end
 
   RSpec.describe 'Les_boucles' do
