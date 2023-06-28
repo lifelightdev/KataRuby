@@ -6,7 +6,10 @@ class Les_boucles
   def  premier_exercice
     items = [1, 2, 3, 4]
     # Ecrire ici le code qui permet de retourner un tableau en le remplissant progressivement dans une boucle 'for'
-    []
+    retour = []
+    for i in items do
+      retour << i * 3
+    end
   end
 
   RSpec.describe 'Les_boucles' do
