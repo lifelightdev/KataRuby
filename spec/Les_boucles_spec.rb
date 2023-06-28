@@ -15,6 +15,19 @@ class Les_boucles
       expect(les_boucles.premier_exercice).to eq [1, 2, 3, 4]
     end
   end
+
+  def deuxieme_exercice
+    items = [6, 9, 2, 1, 4, 0, 18, 3]
+    # Ecrire ici le code qui permet de retourner un tableau contenant seulement les éléments pairs d'items
+    []
+  end
+
+  RSpec.describe 'Les_boucles' do
+    it ' Deuxième exercice' do
+      les_boucles = Les_boucles.new
+      expect(les_boucles.deuxieme_exercice).to eq [6, 2, 4, 0, 18]
+    end
+  end
 end
 
 
