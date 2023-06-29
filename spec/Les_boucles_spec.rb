@@ -63,7 +63,9 @@ class Les_boucles
 
   # 1. calculer la liste des contrats  avec 4 cadrans actifs
   def troisieme_exercice_1
-    []
+    contracts_4_cadrans = contracts("4cadrans")
+    contracts_actifs = contracts("actif")
+    contracts_4_cadrans & contracts_actifs
   end
 
   RSpec.describe 'Les_boucles' do
@@ -75,7 +77,9 @@ class Les_boucles
 
   # 2. calculer la liste de tous les contrats actifs ou résiliés
   def troisieme_exercice_2
-    []
+    contracts_actifs = contracts("actif")
+    contracts_resilie = contracts("résilié")
+    contracts_actifs | contracts_resilie
   end
 
   RSpec.describe 'Les_boucles' do
@@ -87,7 +91,10 @@ class Les_boucles
 
   # 3. calculer la liste des contrats avec 4 cadrans qui ne sont ni actifs, ni résiliés
   def troisieme_exercice_3
-    []
+    contracts_4_cadrans = contracts("4cadrans")
+    contracts_actifs = contracts("actif")
+    contracts_resilie = contracts("résilié")
+    contracts_4_cadrans - contracts_actifs - contracts_resilie
   end
 
   RSpec.describe 'Les_boucles' do
